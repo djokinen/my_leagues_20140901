@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14, 12.125" name="MyLeagues">
+  <DataContextMoniker Name="/MyLeaguesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0c079052-7087-4830-ba6a-69c8187baff8" absoluteBounds="0.75, 6.875, 2, 2.1554996744791657">
+      <DataClassMoniker Name="/MyLeaguesDataContext/Association" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f4164159-8f8b-436e-a23d-b6f147e4b424" absoluteBounds="0.765, 7.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d97343a-deab-47eb-b65e-0ae161607f6c" absoluteBounds="6.25, 4, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyLeaguesDataContext/Team" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7562e881-2c8d-412b-9cfa-7b3957af3c75" absoluteBounds="6.265, 4.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="803f9df5-b024-4191-80f4-467ef6af3a90" absoluteBounds="11.75, 8.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MyLeaguesDataContext/DivisionSeason" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f0f2293-f913-410f-9dd8-69dbec17eba5" absoluteBounds="11.765, 9.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="638bb335-945b-45a4-b75e-7954623f8e37" absoluteBounds="6.25, 6.875, 2, 2.1554996744791657">
+      <DataClassMoniker Name="/MyLeaguesDataContext/DivisionType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff434839-8bd1-4143-a633-6014500221e4" absoluteBounds="6.265, 7.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="238f667e-b3f8-406c-9cd9-d3fe45f03b83" absoluteBounds="6.25, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/MyLeaguesDataContext/Field" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95036acf-b5a6-471c-b14c-6c863d3886a0" absoluteBounds="6.265, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c1d1f00-2f0d-4901-a3b5-e6b6db187538" absoluteBounds="9, 0.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/MyLeaguesDataContext/Game" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0584d878-6197-47f0-8c1f-dd134a786195" absoluteBounds="9.015, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="056f4179-0529-46ba-9345-e7fa39b3cd55" absoluteBounds="11.75, 5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyLeaguesDataContext/GameScore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5f271bc-26f8-4eb2-9a24-a2d9f8623c60" absoluteBounds="11.765, 5.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f70fc851-0555-4ada-abb0-f3649e3ca51e" absoluteBounds="3.5, 6.75, 2, 2.3478011067708326">
+      <DataClassMoniker Name="/MyLeaguesDataContext/League" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abdc52f4-76d6-41cc-b9d1-d936a69f5a80" absoluteBounds="3.515, 7.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ac2b857-e324-48a8-9837-63c3d42f433c" absoluteBounds="9, 8.125, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/MyLeaguesDataContext/Season" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d069cce-edac-4790-ba28-87404dfe9c40" absoluteBounds="9.015, 8.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16b05d20-9068-4ed6-aa64-e3499c712bd8" absoluteBounds="9, 4.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MyLeaguesDataContext/SeasonTeam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3018968-9a59-4c78-8ff6-cde27563bacc" absoluteBounds="9.015, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73df35a1-3b19-49f1-a955-349cabc451b0" absoluteBounds="6.25, 9.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyLeaguesDataContext/SeasonType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88f71937-2a15-4ab3-b9f1-b2e1b861ce0b" absoluteBounds="6.265, 10.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 1.73159912109375); (9 : 1.73159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Field/Field_Game" />
+      <nodes>
+        <classShapeMoniker Id="238f667e-b3f8-406c-9cd9-d3fe45f03b83" />
+        <classShapeMoniker Id="5c1d1f00-2f0d-4901-a3b5-e6b6db187538" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.09538361538462); (8.8125 : 3.53288361538462); (8.8125 : 2.54210283007813); (9 : 2.54210283007813)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Team/Team_Game" />
+      <nodes>
+        <classShapeMoniker Id="2d97343a-deab-47eb-b65e-0ae161607f6c" />
+        <classShapeMoniker Id="5c1d1f00-2f0d-4901-a3b5-e6b6db187538" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.21769230769231 : 4); (8.625 : 3.59269230769231); (8.625 : 2.54210283007813); (9 : 2.54210283007813)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Team/Team_Game1" />
+      <nodes>
+        <classShapeMoniker Id="2d97343a-deab-47eb-b65e-0ae161607f6c" />
+        <classShapeMoniker Id="5c1d1f00-2f0d-4901-a3b5-e6b6db187538" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 2.02005126953125); (12.75 : 2.02005126953125); (12.75 : 5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Game/Game_GameScore" />
+      <nodes>
+        <classShapeMoniker Id="5c1d1f00-2f0d-4901-a3b5-e6b6db187538" />
+        <classShapeMoniker Id="056f4179-0529-46ba-9345-e7fa39b3cd55" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 6.75); (4.5 : 5.07774983723958); (6.25 : 5.07774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/League/League_Team" />
+      <nodes>
+        <classShapeMoniker Id="f70fc851-0555-4ada-abb0-f3649e3ca51e" />
+        <classShapeMoniker Id="2d97343a-deab-47eb-b65e-0ae161607f6c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 7.95274983723958); (6.25 : 7.95274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/League/League_DivisionType" />
+      <nodes>
+        <classShapeMoniker Id="f70fc851-0555-4ada-abb0-f3649e3ca51e" />
+        <classShapeMoniker Id="638bb335-945b-45a4-b75e-7954623f8e37" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.95274983723958); (3.5 : 7.95274983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Association/Association_League" />
+      <nodes>
+        <classShapeMoniker Id="0c079052-7087-4830-ba6a-69c8187baff8" />
+        <classShapeMoniker Id="f70fc851-0555-4ada-abb0-f3649e3ca51e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 9.41429768880208); (11.75 : 9.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Season/Season_DivisionSeason" />
+      <nodes>
+        <classShapeMoniker Id="4ac2b857-e324-48a8-9837-63c3d42f433c" />
+        <classShapeMoniker Id="803f9df5-b024-4191-80f4-467ef6af3a90" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8.57774983723958); (9 : 8.57774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/DivisionType/DivisionType_Season" />
+      <nodes>
+        <classShapeMoniker Id="638bb335-945b-45a4-b75e-7954623f8e37" />
+        <classShapeMoniker Id="4ac2b857-e324-48a8-9837-63c3d42f433c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10 : 8.125); (10 : 5.7612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Season/Season_SeasonTeam" />
+      <nodes>
+        <classShapeMoniker Id="4ac2b857-e324-48a8-9837-63c3d42f433c" />
+        <classShapeMoniker Id="16b05d20-9068-4ed6-aa64-e3499c712bd8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.06814697265625); (9 : 5.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/Team/Team_SeasonTeam" />
+      <nodes>
+        <classShapeMoniker Id="2d97343a-deab-47eb-b65e-0ae161607f6c" />
+        <classShapeMoniker Id="16b05d20-9068-4ed6-aa64-e3499c712bd8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 10.2075512695313); (9 : 10.2075512695313)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/SeasonType/SeasonType_Season" />
+      <nodes>
+        <classShapeMoniker Id="73df35a1-3b19-49f1-a955-349cabc451b0" />
+        <classShapeMoniker Id="4ac2b857-e324-48a8-9837-63c3d42f433c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 9.09780110677083); (4.5 : 10.8277498372396); (6.25 : 10.8277498372396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MyLeaguesDataContext/League/League_SeasonType" />
+      <nodes>
+        <classShapeMoniker Id="f70fc851-0555-4ada-abb0-f3649e3ca51e" />
+        <classShapeMoniker Id="73df35a1-3b19-49f1-a955-349cabc451b0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

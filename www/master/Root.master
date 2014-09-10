@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Root.master.cs" Inherits="master_Root" %>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>My Leagues</title>
+	<link rel="stylesheet" href="/css/root.css" />
+	<asp:ContentPlaceHolder ID="ContentHead" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<asp:ContentPlaceHolder ID="ContentBody" runat="server">
+		</asp:ContentPlaceHolder>
+	</form>
+</body>
+</html>

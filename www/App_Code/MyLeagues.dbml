@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MyLeagues" Class="MyLeaguesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=MyLeagues;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MyLeaguesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Association" Member="Associations">
+    <Type Name="Association">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Association_League" Member="Leagues" ThisKey="ID" OtherKey="AssociationId" Type="League" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Team" Member="Teams">
+    <Type Name="Team">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LeagueId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Team_Game" Member="Games" ThisKey="ID" OtherKey="TeamIdAway" Type="Game" />
+      <Association Name="Team_Game1" Member="Games1" ThisKey="ID" OtherKey="TeamIdHome" Type="Game" />
+      <Association Name="Team_SeasonTeam" Member="SeasonTeams" ThisKey="ID" OtherKey="TeamId" Type="SeasonTeam" />
+      <Association Name="League_Team" Member="League" ThisKey="LeagueId" OtherKey="ID" Type="League" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DivisionSeason" Member="DivisionSeasons">
+    <Type Name="DivisionSeason">
+      <Column Name="DivisionId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeasonId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Season_DivisionSeason" Member="Season" ThisKey="SeasonId" OtherKey="ID" Type="Season" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DivisionType" Member="DivisionTypes">
+    <Type Name="DivisionType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LeagueId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="DivisionType_Season" Member="Seasons" ThisKey="ID" OtherKey="DivisionTypeId" Type="Season" />
+      <Association Name="League_DivisionType" Member="League" ThisKey="LeagueId" OtherKey="ID" Type="League" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Field" Member="Fields">
+    <Type Name="Field">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Field_Game" Member="Games" ThisKey="ID" OtherKey="FieldId" Type="Game" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Game" Member="Games">
+    <Type Name="Game">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamIdHome" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TeamIdAway" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="GameDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FieldId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Game_GameScore" Member="GameScore" ThisKey="ID" OtherKey="GameId" Type="GameScore" Cardinality="One" />
+      <Association Name="Field_Game" Member="Field" ThisKey="FieldId" OtherKey="ID" Type="Field" IsForeignKey="true" />
+      <Association Name="Team_Game" Member="Team" ThisKey="TeamIdAway" OtherKey="ID" Type="Team" IsForeignKey="true" />
+      <Association Name="Team_Game1" Member="Team1" ThisKey="TeamIdHome" OtherKey="ID" Type="Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GameScore" Member="GameScores">
+    <Type Name="GameScore">
+      <Column Name="GameId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ScoreHome" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ScoreAway" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Game_GameScore" Member="Game" ThisKey="GameId" OtherKey="ID" Type="Game" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.League" Member="Leagues">
+    <Type Name="League">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AssociationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Website" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="League_Team" Member="Teams" ThisKey="ID" OtherKey="LeagueId" Type="Team" />
+      <Association Name="League_DivisionType" Member="DivisionTypes" ThisKey="ID" OtherKey="LeagueId" Type="DivisionType" />
+      <Association Name="League_SeasonType" Member="SeasonTypes" ThisKey="ID" OtherKey="LeagueId" Type="SeasonType" />
+      <Association Name="Association_League" Member="Association" ThisKey="AssociationId" OtherKey="ID" Type="Association" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Season" Member="Seasons">
+    <Type Name="Season">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DivisionTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SeasonTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Season_DivisionSeason" Member="DivisionSeasons" ThisKey="ID" OtherKey="SeasonId" Type="DivisionSeason" />
+      <Association Name="Season_SeasonTeam" Member="SeasonTeams" ThisKey="ID" OtherKey="SeasonId" Type="SeasonTeam" />
+      <Association Name="DivisionType_Season" Member="DivisionType" ThisKey="DivisionTypeId" OtherKey="ID" Type="DivisionType" IsForeignKey="true" />
+      <Association Name="SeasonType_Season" Member="SeasonType" ThisKey="SeasonTypeId" OtherKey="ID" Type="SeasonType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SeasonTeam" Member="SeasonTeams">
+    <Type Name="SeasonTeam">
+      <Column Name="SeasonId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Season_SeasonTeam" Member="Season" ThisKey="SeasonId" OtherKey="ID" Type="Season" IsForeignKey="true" />
+      <Association Name="Team_SeasonTeam" Member="Team" ThisKey="TeamId" OtherKey="ID" Type="Team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SeasonType" Member="SeasonTypes">
+    <Type Name="SeasonType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LeagueId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SeasonType_Season" Member="Seasons" ThisKey="ID" OtherKey="SeasonTypeId" Type="Season" />
+      <Association Name="League_SeasonType" Member="League" ThisKey="LeagueId" OtherKey="ID" Type="League" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
