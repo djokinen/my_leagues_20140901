@@ -5,14 +5,24 @@
 <html>
 <head runat="server">
 	<title>My Leagues</title>
-	<link rel="stylesheet" href="/css/root.css" />
+	<link rel="stylesheet" href="/css/material.css" />
 	<asp:ContentPlaceHolder ID="ContentHead" runat="server">
 	</asp:ContentPlaceHolder>
 </head>
 <body>
-	<form id="form1" runat="server">
-		<asp:ContentPlaceHolder ID="ContentBody" runat="server">
-		</asp:ContentPlaceHolder>
-	</form>
+
+	<div class="container">
+		<form id="form1" runat="server">
+
+			<asp:ContentPlaceHolder ID="ContentBody" runat="server">
+			</asp:ContentPlaceHolder>
+
+		</form>
+
+		<p class="footer">
+			a <a target="_blank" href="http://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3">tutorial</a> by <a target="_blank" href="http://scotch.io">scotch.io</a>
+		</p>
+
+	</div>
 </body>
 </html>
