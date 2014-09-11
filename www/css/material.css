@@ -65,8 +65,8 @@ input {
 	textarea:invalid,
 	input:invalid {
 		box-shadow: none;
-		-moz-border-bottom-colors: #f33;
-		border-bottom-color: #f33;
+		-moz-border-bottom-colors: #f88;
+		border-bottom-color: #f88;
 		/*border-color: -moz-use-text-color -moz-use-text-color #757575;*/
 	}
 
@@ -112,7 +112,7 @@ input:valid ~ label {
 
 textarea:invalid ~ .bar:before, textarea:invalid ~ .bar:after,
 input:invalid ~ .bar:before, input:invalid ~ .bar:after {
-	background: none repeat scroll 0 0 #f33;
+	background: none repeat scroll 0 0 #f88;
 }
 
 .bar:before {
