@@ -151,19 +151,23 @@ input:focus ~ .highlight {
 /* all */
 ::-webkit-input-placeholder {
 	color: #999;
+	vertical-align:baseline;
 }
 
 ::-moz-placeholder {
 	color: #999;
+	vertical-align:baseline;
 }
 /* firefox 19+ */
 :-ms-input-placeholder {
 	color: #999;
+	vertical-align:baseline;
 }
 
 /* ie */
 input:-moz-placeholder {
 	color: #999;
+	vertical-align:baseline;
 }
 
 /********	end placeholder formatting */
