@@ -63,6 +63,7 @@
   <Table Name="dbo.Game" Member="Games">
     <Type Name="Game">
       <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeasonId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="TeamIdHome" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="TeamIdAway" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="GameDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -75,6 +76,7 @@
       <Association Name="Field_Game" Member="Field" ThisKey="FieldId" OtherKey="ID" Type="Field" IsForeignKey="true" />
       <Association Name="Team_Game" Member="Team" ThisKey="TeamIdAway" OtherKey="ID" Type="Team" IsForeignKey="true" />
       <Association Name="Team_Game1" Member="Team1" ThisKey="TeamIdHome" OtherKey="ID" Type="Team" IsForeignKey="true" />
+      <Association Name="Season_Game" Member="Season" ThisKey="SeasonId" OtherKey="ID" Type="Season" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.GameScore" Member="GameScores">
@@ -117,6 +119,7 @@
       <Column Name="Modified" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="Season_DivisionSeason" Member="DivisionSeasons" ThisKey="ID" OtherKey="SeasonId" Type="DivisionSeason" />
+      <Association Name="Season_Game" Member="Games" ThisKey="ID" OtherKey="SeasonId" Type="Game" />
       <Association Name="Season_SeasonTeam" Member="SeasonTeams" ThisKey="ID" OtherKey="SeasonId" Type="SeasonTeam" />
       <Association Name="DivisionType_Season" Member="DivisionType" ThisKey="DivisionTypeId" OtherKey="ID" Type="DivisionType" IsForeignKey="true" />
       <Association Name="SeasonType_Season" Member="SeasonType" ThisKey="SeasonTypeId" OtherKey="ID" Type="SeasonType" IsForeignKey="true" />

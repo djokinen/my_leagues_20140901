@@ -1416,6 +1416,8 @@ public partial class Game : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private System.Guid _ID;
 	
+	private System.Guid _SeasonId;
+	
 	private System.Guid _TeamIdHome;
 	
 	private System.Guid _TeamIdAway;
@@ -1440,12 +1442,16 @@ public partial class Game : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private EntityRef<Team> _Team1;
 	
+	private EntityRef<Season> _Season;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnIDChanging(System.Guid value);
     partial void OnIDChanged();
+    partial void OnSeasonIdChanging(System.Guid value);
+    partial void OnSeasonIdChanged();
     partial void OnTeamIdHomeChanging(System.Guid value);
     partial void OnTeamIdHomeChanged();
     partial void OnTeamIdAwayChanging(System.Guid value);
@@ -1470,6 +1476,7 @@ public partial class Game : INotifyPropertyChanging, INotifyPropertyChanged
 		this._Field = default(EntityRef<Field>);
 		this._Team = default(EntityRef<Team>);
 		this._Team1 = default(EntityRef<Team>);
+		this._Season = default(EntityRef<Season>);
 		OnCreated();
 	}
 	
@@ -1489,6 +1496,30 @@ public partial class Game : INotifyPropertyChanging, INotifyPropertyChanged
 				this._ID = value;
 				this.SendPropertyChanged("ID");
 				this.OnIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SeasonId", DbType="UniqueIdentifier NOT NULL")]
+	public System.Guid SeasonId
+	{
+		get
+		{
+			return this._SeasonId;
+		}
+		set
+		{
+			if ((this._SeasonId != value))
+			{
+				if (this._Season.HasLoadedOrAssignedValue)
+				{
+					throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+				}
+				this.OnSeasonIdChanging(value);
+				this.SendPropertyChanging();
+				this._SeasonId = value;
+				this.SendPropertyChanged("SeasonId");
+				this.OnSeasonIdChanged();
 			}
 		}
 	}
@@ -1792,6 +1823,40 @@ public partial class Game : INotifyPropertyChanging, INotifyPropertyChanged
 					this._TeamIdHome = default(System.Guid);
 				}
 				this.SendPropertyChanged("Team1");
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Season_Game", Storage="_Season", ThisKey="SeasonId", OtherKey="ID", IsForeignKey=true)]
+	public Season Season
+	{
+		get
+		{
+			return this._Season.Entity;
+		}
+		set
+		{
+			Season previousValue = this._Season.Entity;
+			if (((previousValue != value) 
+						|| (this._Season.HasLoadedOrAssignedValue == false)))
+			{
+				this.SendPropertyChanging();
+				if ((previousValue != null))
+				{
+					this._Season.Entity = null;
+					previousValue.Games.Remove(this);
+				}
+				this._Season.Entity = value;
+				if ((value != null))
+				{
+					value.Games.Add(this);
+					this._SeasonId = value.ID;
+				}
+				else
+				{
+					this._SeasonId = default(System.Guid);
+				}
+				this.SendPropertyChanged("Season");
 			}
 		}
 	}
@@ -2445,6 +2510,8 @@ public partial class Season : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private EntitySet<DivisionSeason> _DivisionSeasons;
 	
+	private EntitySet<Game> _Games;
+	
 	private EntitySet<SeasonTeam> _SeasonTeams;
 	
 	private EntityRef<DivisionType> _DivisionType;
@@ -2478,6 +2545,7 @@ public partial class Season : INotifyPropertyChanging, INotifyPropertyChanged
 	public Season()
 	{
 		this._DivisionSeasons = new EntitySet<DivisionSeason>(new Action<DivisionSeason>(this.attach_DivisionSeasons), new Action<DivisionSeason>(this.detach_DivisionSeasons));
+		this._Games = new EntitySet<Game>(new Action<Game>(this.attach_Games), new Action<Game>(this.detach_Games));
 		this._SeasonTeams = new EntitySet<SeasonTeam>(new Action<SeasonTeam>(this.attach_SeasonTeams), new Action<SeasonTeam>(this.detach_SeasonTeams));
 		this._DivisionType = default(EntityRef<DivisionType>);
 		this._SeasonType = default(EntityRef<SeasonType>);
@@ -2685,6 +2753,19 @@ public partial class Season : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Season_Game", Storage="_Games", ThisKey="ID", OtherKey="SeasonId")]
+	public EntitySet<Game> Games
+	{
+		get
+		{
+			return this._Games;
+		}
+		set
+		{
+			this._Games.Assign(value);
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Season_SeasonTeam", Storage="_SeasonTeams", ThisKey="ID", OtherKey="SeasonId")]
 	public EntitySet<SeasonTeam> SeasonTeams
 	{
@@ -2793,6 +2874,18 @@ public partial class Season : INotifyPropertyChanging, INotifyPropertyChanged
 	}
 	
 	private void detach_DivisionSeasons(DivisionSeason entity)
+	{
+		this.SendPropertyChanging();
+		entity.Season = null;
+	}
+	
+	private void attach_Games(Game entity)
+	{
+		this.SendPropertyChanging();
+		entity.Season = this;
+	}
+	
+	private void detach_Games(Game entity)
 	{
 		this.SendPropertyChanging();
 		entity.Season = null;

@@ -30,14 +30,27 @@ public partial class schedule : System.Web.UI.Page
 		List<Game> gameList = GameBL.Get(false);
 		for (int i = 0; i < gameList.Count; i++)
 		{
+			bool hasscore = gameList[i].GameScore != null;
+
 			text.Append("<tr>");
 			text.AppendFormat("<td>{0}</td>", gameList[i].GameDateTime.ToString("ddd MMM d"));
 			text.AppendFormat("<td>{0}</td>", gameList[i].GameDateTime.ToString("h:mm"));
 			text.AppendFormat("<td>{0}</td>", gameList[i].Field.Name);
-			text.AppendFormat("<td>{0}</td>", gameList[i].Team.Name);
-			text.AppendFormat("<td>{0}</td>", gameList[i].Team1.Name);
-			// text.AppendFormat("<td>{0}</td>", gameList[i].s);
+
+			text.Append("<td>");
+			text.Append(gameList[i].TeamAway.Name);
+			if (hasscore) { text.Append(" (" + gameList[i].GameScore.ScoreAway + ")"); }
+			text.Append("</td>");
+
+			text.Append("<td>");
+			text.Append(gameList[i].TeamHome.Name);
+			if (hasscore) { text.Append(" (" + gameList[i].GameScore.ScoreHome + ")"); }
+			text.Append("</td>");
+
+			text.AppendFormat("<td>{0}</td>", gameList[i].Season.SeasonType.Name);
 			text.Append("</tr>");
+
+
 		}
 		literalBody.Text = text.ToString();
 	}

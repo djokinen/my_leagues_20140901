@@ -36,6 +36,7 @@ namespace MyLeagues.Dao
 				value.FieldId = game.FieldId;
 				value.GameDateTime = game.GameDateTime;
 				value.Modified = DateTime.Now;
+				value.SeasonId = game.SeasonId;
 				value.TeamIdAway = game.TeamIdAway;
 				value.TeamIdHome = game.TeamIdHome;
 				value.Modified = DateTime.Now;
