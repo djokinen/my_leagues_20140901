@@ -3,13 +3,14 @@
 }
 
 body {
+	font-family: Arial, sans-serif;
 	background: url("http://scotch.io/wp-content/uploads/2014/07/61.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 .container {
 	background: none repeat scroll 0 0 #fff;
 	display: block;
-	font-family: 'Roboto', Arial;
+	/*font-family: Arial, sans-serif;*/
 	margin: 30px auto 0;
 	padding: 10px 50px 50px;
 	width: 600px;
@@ -39,6 +40,11 @@ h2 {
 	position: relative;
 }
 
+textarea, input, bar {
+	width: 100%;
+}
+
+textarea,
 input {
 	-moz-border-bottom-colors: none;
 	-moz-border-left-colors: none;
@@ -49,25 +55,37 @@ input {
 	border-style: none none solid;
 	border-width: medium medium 1px;
 	display: block;
-	font-size: 18px;
+	font-size: medium;
+	font-family: Arial, sans-serif;
 	padding: 10px 10px 10px 5px;
-	width: 300px;
+	/*width: 90%;*/
 }
 
+
+	textarea:invalid,
+	input:invalid {
+		box-shadow: none;
+		-moz-border-bottom-colors: #f33;
+		border-bottom-color: #f33;
+		/*border-color: -moz-use-text-color -moz-use-text-color #757575;*/
+	}
+
+	textarea:focus,
 	input:focus {
 		outline: medium none;
 	}
 
 label {
 	color: #5264ae;
-	font-size: 14px;
+	font-size: small;
 	font-weight: normal;
 	left: 5px;
 	pointer-events: none;
 	position: absolute;
 	top: -20px;
 }
-
+textarea:focus ~ label,
+textarea:valid ~ label,
 input:focus ~ label,
 input:valid ~ label {
 	color: #5264ae;
@@ -78,7 +96,7 @@ input:valid ~ label {
 .bar {
 	display: block;
 	position: relative;
-	width: 300px;
+	/*width: 90%;*/
 }
 
 	.bar:before, .bar:after {
@@ -91,14 +109,21 @@ input:valid ~ label {
 		width: 0;
 	}
 
-	.bar:before {
-		left: 50%;
-	}
 
-	.bar:after {
-		right: 50%;
-	}
+textarea:invalid ~ .bar:before, textarea:invalid ~ .bar:after,
+input:invalid ~ .bar:before, input:invalid ~ .bar:after {
+	background: none repeat scroll 0 0 #f33;
+}
 
+.bar:before {
+	left: 50%;
+}
+
+.bar:after {
+	right: 50%;
+}
+
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after,
 input:focus ~ .bar:before, input:focus ~ .bar:after {
 	width: 50%;
 }
@@ -113,6 +138,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 	width: 100px;
 }
 
+textarea:focus ~ .highlight,
 input:focus ~ .highlight {
 	animation: 0.3s ease 0s normal none 1 inputHighlighter;
 }
@@ -134,6 +160,7 @@ input:focus ~ .highlight {
 :-ms-input-placeholder {
 	color: #999;
 }
+
 /* ie */
 input:-moz-placeholder {
 	color: #999;

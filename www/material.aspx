@@ -4,13 +4,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="Server">
 
-		<h2>Google Material Design in CSS3<small>Inputs</small></h2>
+		<h2>Material Design in CSS3<small>Inputs</small></h2>
 
 		<div class="group">
 			<input type="text" required="" placeholder="John Smith">
 			<span class="highlight"></span>
 			<span class="bar"></span>
 			<label>Name</label>
+		</div>
+
+		<div class="group">
+			<textarea placeholder="Not required"></textarea>
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			<label>Description</label>
 		</div>
 
 		<div class="group">

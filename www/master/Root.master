@@ -19,7 +19,7 @@
 
 		</form>
 
-		<p class="footer">
+		<p class="footer" style="display:none;">
 			a <a target="_blank" href="http://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3">tutorial</a> by <a target="_blank" href="http://scotch.io">scotch.io</a>
 		</p>
 
