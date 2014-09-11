@@ -5,10 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class master_Root : System.Web.UI.MasterPage
+public partial class master_Root : BaseMasterPage
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
+	protected override void OnPreRender(EventArgs e)
+	{
+		base.OnPreRender(e);
+		Page.Header.Title =
+			string.Format("My Leagues{0}",
+			string.IsNullOrWhiteSpace(Page.Title) ? string.Empty : " | " + Page.Title);
+	}
 }

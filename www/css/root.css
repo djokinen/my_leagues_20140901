@@ -1,4 +1,22 @@
-﻿.primary {
+﻿body {
+	/*color: #fff; background-color: #000;*/
+	background-color: #eef;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	opacity: .8;
+}
+
+h2 {
+	opacity: .6;
+}
+
+h3 {
+	opacity: .4;
+}
+
+.primary {
 	/* blue */
 	background-color: #03a9f4;
 	color: #fff;
@@ -19,11 +37,6 @@
 	background-color: #f50217;
 }*/
 
-body {
-	font-family: Arial, sans-serif;
-	opacity: .9;
-}
-
 button {
 	font-size: .9em;
 	background-color: #03a9f4;
@@ -35,32 +48,40 @@ button {
 	text-transform: uppercase;
 }
 
-	button:active,
-	button.secondary:active {
-		background-color: #1976D2;
-		border-color: #1976D2;
-		color: #fff;
-	}
+th {
+	text-align: left;
+}
 
-	button.important:active {
-		background-color: #f50217;
-		border-color: #f50217;
-		color: #fff;
-	}
+td, th {
+	padding: 0.75em;
+}
 
-	button:hover,
-	button:active {
-		text-decoration: underline;
-	}
+button:active,
+button.secondary:active {
+	background-color: #1976D2;
+	border-color: #1976D2;
+	color: #fff;
+}
 
-	button.secondary {
-		background-color: #fff;
-		border-color: #03a9f4;
-		color: #03a9f4;
-	}
+button.important:active {
+	background-color: #f50217;
+	border-color: #f50217;
+	color: #fff;
+}
 
-	button.important {
-		background-color: #fff;
-		border-color: #f50217;
-		color: #f50217;
-	}
+button:hover,
+button:active {
+	text-decoration: underline;
+}
+
+button.secondary {
+	background-color: #fff;
+	border-color: #03a9f4;
+	color: #03a9f4;
+}
+
+button.important {
+	background-color: #fff;
+	border-color: #f50217;
+	color: #f50217;
+}

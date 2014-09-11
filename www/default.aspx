@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master/Root.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" %>
+﻿<%@ Page Title="Association" Language="C#" MasterPageFile="~/master/Root.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentHead" runat="Server">
 </asp:Content>
@@ -10,7 +10,7 @@
 
 	<h2>Create, Update, Delete</h2>
 	<div>
-		<input id="textAssociationId" placeholder="Association Id" required="required" runat="server" title="Association Id" type="text" />
+		<input id="textAssociationId" placeholder="association id" required="required" runat="server" title="association id" type="text" />
 		<label>Use with update and delete</label>
 	</div>
 
