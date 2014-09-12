@@ -14,17 +14,16 @@
 		</div>
 
 		<div class="group">
-			<textarea placeholder="Not required"></textarea>
-			<span class="highlight"></span>
-			<span class="bar"></span>
-			<label>Description</label>
-		</div>
-
-		<div class="group">
 			<input type="email" required="" placeholder="john@domain.net">
 			<span class="highlight"></span>
 			<span class="bar"></span>
 			<label>Email</label>
 		</div>
 
+		<div class="group">
+			<textarea placeholder="Not required"></textarea>
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			<label>Description</label>
+		</div>
 </asp:Content>
