@@ -7,23 +7,26 @@
 		<h2>Material Design in CSS3<small>Inputs</small></h2>
 
 		<div class="group">
-			<input type="text" required="" placeholder="John Smith">
-			<span class="highlight"></span>
-			<span class="bar"></span>
 			<label>Name</label>
-		</div>
-
-		<div class="group">
-			<input type="email" required="" placeholder="john@domain.net">
+			<input type="text" required="" placeholder="John Smith" />
 			<span class="highlight"></span>
 			<span class="bar"></span>
-			<label>Email</label>
+			
 		</div>
 
 		<div class="group">
+			<label>Email</label>
+			<input type="email" required="" placeholder="john@domain.net" />
+			<span class="highlight"></span>
+			<span class="bar"></span>
+			
+		</div>
+
+		<div class="group">
+			<label>Description</label>
 			<textarea placeholder="Not required"></textarea>
 			<span class="highlight"></span>
 			<span class="bar"></span>
-			<label>Description</label>
+			
 		</div>
 </asp:Content>

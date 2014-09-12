@@ -65,8 +65,8 @@ input {
 	textarea:invalid,
 	input:invalid {
 		box-shadow: none;
-		-moz-border-bottom-colors: #f88;
-		border-bottom-color: #f88;
+		-moz-border-bottom-colors: #f33;
+		border-bottom-color: #f33;
 		/*border-color: -moz-use-text-color -moz-use-text-color #757575;*/
 	}
 
@@ -75,23 +75,34 @@ input {
 		outline: medium none;
 	}
 
-label {
-	color: #5264ae;
+.group label {
+	/*color: #5264ae;*/
 	font-size: small;
-	font-weight: normal;
+	/*font-weight: normal;*/
 	left: 5px;
-	pointer-events: none;
-	position: absolute;
-	top: -20px;
+	/*pointer-events: none;*/
+	/*position: absolute;*/
+	/*top: -20px;*/
 }
+
 textarea:focus ~ label,
+input:focus + label
+ {
+	color: #5264ae;
+	font-size: larger;
+	border: solid 1px #f80;
+	/*top: -20px;*/
+}
+
+/*textarea:focus ~ label,
 textarea:valid ~ label,
 input:focus ~ label,
 input:valid ~ label {
 	color: #5264ae;
-	font-size: 14px;
+	font-size: larger;
 	top: -20px;
 }
+	*/
 
 .bar {
 	display: block;
@@ -112,7 +123,7 @@ input:valid ~ label {
 
 textarea:invalid ~ .bar:before, textarea:invalid ~ .bar:after,
 input:invalid ~ .bar:before, input:invalid ~ .bar:after {
-	background: none repeat scroll 0 0 #f88;
+	background: none repeat scroll 0 0 #f33;
 }
 
 .bar:before {
@@ -151,23 +162,23 @@ input:focus ~ .highlight {
 /* all */
 ::-webkit-input-placeholder {
 	color: #999;
-	vertical-align:baseline;
+	vertical-align: baseline;
 }
 
 ::-moz-placeholder {
 	color: #999;
-	vertical-align:baseline;
+	vertical-align: baseline;
 }
 /* firefox 19+ */
 :-ms-input-placeholder {
 	color: #999;
-	vertical-align:baseline;
+	vertical-align: baseline;
 }
 
 /* ie */
 input:-moz-placeholder {
 	color: #999;
-	vertical-align:baseline;
+	vertical-align: baseline;
 }
 
 /********	end placeholder formatting */
