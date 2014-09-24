@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="Association" Language="C#" MasterPageFile="~/master/Root.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="_default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentHead" runat="Server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="Server">
 
 	<h1>Associations</h1>

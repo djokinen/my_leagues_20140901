@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="Server">
 
-		<h2>Material Design in CSS3<small>Inputs</small></h2>
+		<h2>Heading 2 (This Page)</h2>
 
 		<div class="group">
 			<label>Name</label>

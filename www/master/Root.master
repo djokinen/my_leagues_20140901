@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Root.master.cs" Inherits="master_Root" %>
+﻿<%@ Master ClientIDMode="Static" Language="C#" AutoEventWireup="true" CodeFile="Root.master.cs" Inherits="master_Root" %>
 
 <!DOCTYPE html>
 
@@ -11,18 +11,25 @@
 </head>
 <body>
 
-	<div class="container">
-		<form id="form1" runat="server">
+	<form id="form1" runat="server">
 
-			<asp:ContentPlaceHolder ID="ContentBody" runat="server">
-			</asp:ContentPlaceHolder>
+		<header class="primary">
+			Header Element
+		</header>
 
-		</form>
+		<section class="clearfix">
 
-		<p class="footer" style="display:none;">
+			<h1>Heading 1 (Master Page)</h1>
+
+			<asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
+
+		</section>
+
+		<footer class="primary">
 			a <a target="_blank" href="http://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3">tutorial</a> by <a target="_blank" href="http://scotch.io">scotch.io</a>
-		</p>
+		</footer>
 
-	</div>
+	</form>
+
 </body>
 </html>
