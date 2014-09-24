@@ -84,16 +84,15 @@ input {
 	/*position: absolute;*/
 	/*top: -20px;*/
 }
-
+/*
 textarea:focus ~ label,
 input:focus + label
  {
 	color: #5264ae;
 	font-size: larger;
 	border: solid 1px #f80;
-	/*top: -20px;*/
 }
-
+*/
 /*textarea:focus ~ label,
 textarea:valid ~ label,
 input:focus ~ label,
