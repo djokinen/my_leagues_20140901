@@ -1,0 +1,7 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TextArea.ascx.cs" Inherits="UserControl_Form_TextArea" %>
+
+<p <%= this.IsRequired ? "class=\"required\"" : string.Empty %>>
+	<label for="txt" id="lbl" runat="server"></label>
+	<textarea id="txt" runat="server" class="maxwidth"></textarea>
+	<my:CustomRequiredFieldValidator Enabled="false" ID="req" runat="server"></my:CustomRequiredFieldValidator>
+</p>

@@ -14,8 +14,8 @@
 					<div class="name"><%# Eval("Name") %></div>
 					<div class="description"><%# Eval("Description") %></div>
 				</a>
-				</div>
-			</li>
+			</div>
+		</li>
 
 	</ItemTemplate>
 

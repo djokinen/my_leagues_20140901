@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="Server">
 
 	<h1>Associations</h1>
-	<h2>Read</h2>
+
 	<asp:GridView ID="gridView" runat="server"></asp:GridView>
 
 	<h2>Create, Update, Delete</h2>
@@ -29,7 +29,7 @@
 		<button id="buttonDelete" class="important" runat="server" title="delete" value="delete" name="delete" validationgroup="delete">delete</button>
 	</div>
 
-	<h2>Active</h2>
+	<h1>Active</h1>
 	<button>Standard</button>
 	<button class="secondary">Secondary</button>
 	<button class="important">Important</button>
