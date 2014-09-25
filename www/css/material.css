@@ -25,8 +25,8 @@ header {
 section.body {
     position: absolute;
     top: 8em;
-	 right:1em;
-	 left:1em;
+	 right:0em;
+	 left:0em;
 }
 
 footer {
@@ -43,8 +43,12 @@ footer {
 
 
 .group {
-	margin-bottom: 45px;
+	margin-bottom: 1.5em;
 	position: relative;
+}
+
+.form {
+	
 }
 
 textarea, input, bar {

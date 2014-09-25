@@ -24,7 +24,7 @@
 		</section>
 
 		<footer class="primary">
-			a <a target="_blank" href="http://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3">tutorial</a> by <a target="_blank" href="http://scotch.io">scotch.io</a>
+			Footer Element with <a target="_blank" href="http://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3">link</a>.
 		</footer>
 
 	</form>
