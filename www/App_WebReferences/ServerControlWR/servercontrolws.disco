@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://ektron-beta.ce.ryerson.ca/de_courses/workarea/servercontrolws.asmx?wsdl" docRef="http://ektron-beta.ce.ryerson.ca/de_courses/workarea/servercontrolws.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://ektron-beta.ce.ryerson.ca/de_courses/workarea/servercontrolws.asmx" xmlns:q1="http://www.ektron.com/CMS400/Webservice" binding="q1:ServerControlWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://ektron-beta.ce.ryerson.ca/de_courses/workarea/servercontrolws.asmx" xmlns:q2="http://www.ektron.com/CMS400/Webservice" binding="q2:ServerControlWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

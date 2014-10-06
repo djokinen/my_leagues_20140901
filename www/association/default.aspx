@@ -4,7 +4,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" runat="Server">
 
-	<h2>Association List</h2>
 	<association:List ID="associationList" runat="server" />
 
 </asp:Content>

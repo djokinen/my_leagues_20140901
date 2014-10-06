@@ -7,26 +7,24 @@ body {
 
 .primary, .primary a {
 	/* blue */
-	background-color: #03a9f4;
+	background-color: #38f;
 	color: #fff;
 }
 
 header {
-    font-size: 3em;
-    left: 0;
-    padding: 1em 0 0.5em;
-    position: fixed;
-    right: 0;
-    text-align: center;
-    top: 0;
-    white-space: nowrap;
+	font-size: 3em;
+	left: 0;
+	padding: 1em 0 0.5em;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	white-space: nowrap;
 }
 
-section.body {
-    position: absolute;
-    top: 8em;
-	 right:0em;
-	 left:0em;
+.body {
+	margin-top: 9em;
+	margin-bottom: 3em;
 }
 
 footer {
@@ -35,12 +33,20 @@ footer {
 	right: 0;
 	bottom: 0;
 	left: 0;
-
-    font-size: 1em;
-    padding: 1em 0 0.5em;
-    white-space: nowrap;
+	font-size: 1em;
+	padding: 1em 0 0.5em;
+	white-space: nowrap;
 }
 
+.error {
+	color: #f33;
+}
+
+.error-message {
+	padding: 1em;
+	color: #fff;
+	background-color: #f33;
+}
 
 .group {
 	margin-bottom: 1.5em;
@@ -48,11 +54,9 @@ footer {
 }
 
 .form {
-	
 }
 
 textarea, input, bar {
-	/*width: 100%;*/
 	width: calc(100% - 1em);
 }
 
@@ -62,7 +66,7 @@ input {
 	-moz-border-left-colors: none;
 	-moz-border-right-colors: none;
 	-moz-border-top-colors: none;
-	border-color: -moz-use-text-color -moz-use-text-color #757575;
+	border-color: -moz-use-text-color -moz-use-text-color #888;
 	border-image: none;
 	border-style: none none solid;
 	border-width: medium medium 1px;
@@ -70,59 +74,71 @@ input {
 	font-size: medium;
 	font-family: Arial, sans-serif;
 	padding: 10px 10px 10px 5px;
-	/*width: 90%;*/
+}
+
+	input[type=button]:hover, input[type=submit]:hover {
+		opacity: 1;
+	}
+
+	input[type=button]:active, input[type=submit]:active {
+		opacity: .3;
+	}
+
+	input[type=button], input[type=submit] {
+		color: #fff;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #38f;
+		background-color: #38f;
+		display: inline-block;
+		
+		opacity: .70;
+
+		width: 15%;
+		min-width:5em;
+		max-width: 8em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-transform: capitalize;
+	}
+
+.secondary {
+	background-color: #fff !important;
+	color: #38f !important;
+}
+
+.important {
+	border-color: #f33 !important;
+	background-color: #fff !important;
+	color: #f33 !important;
+	float: right;
 }
 
 
-	textarea:invalid,
-	input:invalid {
-		box-shadow: none;
-		-moz-border-bottom-colors: #f33;
-		border-bottom-color: #f33;
-		/*border-color: -moz-use-text-color -moz-use-text-color #757575;*/
-	}
+textarea:invalid,
+input:invalid {
+	box-shadow: none;
+	-moz-border-bottom-colors: #f33;
+	border-bottom-color: #f33;
+}
 
-	textarea:focus,
-	input:focus {
-		outline: medium none;
-	}
+textarea:focus,
+input:focus {
+	outline: medium none;
+}
 
 .group label {
-	/*color: #5264ae;*/
+	color: #888;
 	font-size: small;
-	/*font-weight: normal;*/
-	/*left: 5px;*/
-	/*pointer-events: none;*/
-	/*position: absolute;*/
-	/*top: -20px;*/
 }
-/*
-textarea:focus ~ label,
-input:focus + label
- {
-	color: #5264ae;
-	font-size: larger;
-	border: solid 1px #f80;
-}
-*/
-/*textarea:focus ~ label,
-textarea:valid ~ label,
-input:focus ~ label,
-input:valid ~ label {
-	color: #5264ae;
-	font-size: larger;
-	top: -20px;
-}
-	*/
 
 .bar {
 	display: block;
 	position: relative;
-	/*width: 90%;*/
 }
 
 	.bar:before, .bar:after {
-		background: none repeat scroll 0 0 #5264ae;
+		background: none repeat scroll 0 0 #38f;
 		bottom: 1px;
 		content: "";
 		height: 2px;
@@ -130,7 +146,6 @@ input:valid ~ label {
 		transition: all 0.2s ease 0s;
 		width: 0;
 	}
-
 
 textarea:invalid ~ .bar:before, textarea:invalid ~ .bar:after,
 input:invalid ~ .bar:before, input:invalid ~ .bar:after {
@@ -165,30 +180,29 @@ input:focus ~ .highlight {
 	animation: 0.3s ease 0s normal none 1 inputHighlighter;
 }
 
-
 /********	placeholder formatting 
 	see: http://davidwalsh.name/html5-placeholder-css
 	see: http://bavotasan.com/2011/html5-placeholder-jquery-fix/ */
 
 /* all */
 ::-webkit-input-placeholder {
-	color: #999;
+	color: #888;
 	vertical-align: baseline;
 }
 
 ::-moz-placeholder {
-	color: #999;
+	color: #888;
 	vertical-align: baseline;
 }
 /* firefox 19+ */
 :-ms-input-placeholder {
-	color: #999;
+	color: #888;
 	vertical-align: baseline;
 }
 
 /* ie */
 input:-moz-placeholder {
-	color: #999;
+	color: #888;
 	vertical-align: baseline;
 }
 
@@ -197,7 +211,7 @@ input:-moz-placeholder {
 
 @keyframes inputHighlighter {
 	0% {
-		background: none repeat scroll 0 0 #5264ae;
+		background: none repeat scroll 0 0 #38f;
 	}
 
 	100% {
@@ -208,7 +222,7 @@ input:-moz-placeholder {
 
 @keyframes inputHighlighter {
 	0% {
-		background: none repeat scroll 0 0 #5264ae;
+		background: none repeat scroll 0 0 #38f;
 	}
 
 	100% {

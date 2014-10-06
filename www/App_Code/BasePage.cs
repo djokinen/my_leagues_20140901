@@ -7,4 +7,14 @@ using System.Web;
 /// Summary description for BaseMasterPage
 /// </summary>
 public class BasePage : System.Web.UI.Page
-{ }
+{
+	protected Guid AssociationId
+	{
+		get
+		{
+			Guid value;
+			Guid.TryParse(Request.QueryString[Resources.Key.AssociationId], out value);
+			return value;
+		}
+	}
+}

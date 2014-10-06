@@ -10,6 +10,15 @@ public partial class association_detail : BasePage
 	protected override void OnLoad(EventArgs e)
 	{
 		base.OnLoad(e);
-		if (!IsPostBack) { base.DataBind(); }
+		if (!IsPostBack)
+		{
+			this.DataBind();
+		}
+	}
+
+	public override void DataBind()
+	{
+		associationDetail.AssociationId = base.AssociationId;
+		base.DataBind();
 	}
 }

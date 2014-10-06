@@ -8,6 +8,17 @@ using System.Web.UI.WebControls;
 
 public partial class UserControl_Association_List : BaseUserControl
 {
+	protected override void OnInit(EventArgs e)
+	{
+		base.OnInit(e);
+		buttonCreate.Click += buttonCreate_Click;
+	}
+
+	void buttonCreate_Click(object sender, EventArgs e)
+	{
+		Response.Redirect(Resources.Key.AssociationUrl, true);
+	}
+
 	public override void DataBind()
 	{
 		base.DataBind();

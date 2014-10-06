@@ -18,7 +18,7 @@ h3 {
 
 .primary {
 	/* blue */
-	background-color: #03a9f4;
+	background-color: #38f;
 	color: #fff;
 }
 
@@ -39,8 +39,8 @@ h3 {
 
 button {
 	font-size: .9em;
-	background-color: #03a9f4;
-	border: 1px solid #03a9f4;
+	background-color: #38f;
+	border: 1px solid #38f;
 	border-radius: 2px;
 	color: #fff;
 	margin: 0.5em 0;
@@ -76,8 +76,8 @@ button:active {
 
 button.secondary {
 	background-color: #fff;
-	border-color: #03a9f4;
-	color: #03a9f4;
+	border-color: #38f;
+	color: #38f;
 }
 
 button.important {

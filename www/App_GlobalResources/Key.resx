@@ -120,6 +120,12 @@
   <data name="AssociationId" xml:space="preserve">
     <value>aid</value>
   </data>
+  <data name="AssociationListUrl" xml:space="preserve">
+    <value>/association/default.aspx</value>
+  </data>
+  <data name="AssociationUrl" xml:space="preserve">
+    <value>/association/detail.aspx</value>
+  </data>
   <data name="MyLeaguesConnectionStringName" xml:space="preserve">
     <value>MyLeaguesConnectionString</value>
   </data>

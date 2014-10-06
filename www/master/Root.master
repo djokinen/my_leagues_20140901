@@ -17,8 +17,6 @@
 
 		<section class="body">
 
-			<h1>Heading One</h1>
-
 			<asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
 
 		</section>
