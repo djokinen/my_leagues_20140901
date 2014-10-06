@@ -17,4 +17,14 @@ public class BasePage : System.Web.UI.Page
 			return value;
 		}
 	}
+
+	protected Guid LeagueId
+	{
+		get
+		{
+			Guid value;
+			Guid.TryParse(Request.QueryString[Resources.Key.LeagueId], out value);
+			return value;
+		}
+	}
 }

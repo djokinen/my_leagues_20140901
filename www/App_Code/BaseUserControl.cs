@@ -8,16 +8,26 @@ using System.Web;
 /// </summary>
 public class BaseUserControl : System.Web.UI.UserControl
 {
-	public Guid AssociationId
+	#region Viewstate Helper Methods
+	private Guid _getViewState(string key)
 	{
-		get
-		{
-			if (ViewState[Resources.Key.AssociationId] != null)
-			{
-				return (Guid)ViewState[Resources.Key.AssociationId];
-			}
-			else { return Guid.Empty; }
-		}
-		set { ViewState[Resources.Key.AssociationId] = value; }
+		if (ViewState[key] != null) { return (Guid)ViewState[key]; }
+		else { return Guid.Empty; }
 	}
+
+	private void _setViewState(string key, Guid value)
+	{
+		ViewState[key] = value;
+	}
+	#endregion
+
+	public Guid AssociationId { get { return _getViewState(Resources.Key.AssociationId); } set { _setViewState(Resources.Key.AssociationId, value); } }
+
+	public Guid DivisionId { get { return _getViewState(Resources.Key.DivisionId); } set { _setViewState(Resources.Key.DivisionId, value); } }
+
+	public Guid LeagueId { get { return _getViewState(Resources.Key.LeagueId); } set { _setViewState(Resources.Key.LeagueId, value); } }
+
+	public Guid SeasonId { get { return _getViewState(Resources.Key.SeasonId); } set { _setViewState(Resources.Key.SeasonId, value); } }
+
+	public Guid TeamId { get { return _getViewState(Resources.Key.TeamId); } set { _setViewState(Resources.Key.TeamId, value); } }
 }

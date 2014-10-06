@@ -126,10 +126,46 @@
   <data name="AssociationUrl" xml:space="preserve">
     <value>/association/detail.aspx</value>
   </data>
+  <data name="DivisionId" xml:space="preserve">
+    <value>did</value>
+  </data>
+  <data name="DivisionListUrl" xml:space="preserve">
+    <value>/association/league/division/default.aspx</value>
+  </data>
+  <data name="DivisionUrl" xml:space="preserve">
+    <value>/association/league/division/detail.aspx</value>
+  </data>
+  <data name="LeagueId" xml:space="preserve">
+    <value>lid</value>
+  </data>
+  <data name="LeagueListUrl" xml:space="preserve">
+    <value>/association/league/default.aspx</value>
+  </data>
+  <data name="LeagueUrl" xml:space="preserve">
+    <value>/association/league/detail.aspx</value>
+  </data>
   <data name="MyLeaguesConnectionStringName" xml:space="preserve">
     <value>MyLeaguesConnectionString</value>
   </data>
   <data name="MyLeaguesDataContext" xml:space="preserve">
     <value>myleaguesdatacontext</value>
+  </data>
+  <data name="SeasonId" xml:space="preserve">
+    <value>sid</value>
+  </data>
+  <data name="SeasonListUrl" xml:space="preserve">
+    <value>/association/league/season/default.aspx</value>
+  </data>
+  <data name="SeasonUrl" xml:space="preserve">
+    <value>/association/league/season/detail.aspx</value>
+  </data>
+  <data name="TeamId" xml:space="preserve">
+    <value>tid</value>
+  </data>
+  <data name="TeamListUrl" xml:space="preserve">
+    <value>/association/league/team/default.aspx</value>
+  </data>
+  <data name="TeamUrl" xml:space="preserve">
+    <value>/association/league/team/detail.aspx</value>
   </data>
 </root>

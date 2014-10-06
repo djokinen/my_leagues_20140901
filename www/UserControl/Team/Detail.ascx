@@ -1,9 +1,11 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Detail.ascx.cs" Inherits="UserControl_Association_Detail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Detail.ascx.cs" Inherits="UserControl_Team_Detail" %>
 
 <section class="form">
 
 	<div class="commands">
-		<custom:CustomButton ID="buttonLeagueList" runat="server" Text="Leagues" />
+		<custom:CustomButton ID="buttonSeasonList" runat="server" Text="Seasons" />
+		<custom:CustomButton ID="buttonDivisionList" runat="server" Text="Divisions" />
+		<custom:CustomButton ID="buttonTeamList" runat="server" Text="Teams" />
 	</div>
 
 	<custom:CustomMessage ID="message" MessageType="Error" runat="server"></custom:CustomMessage>

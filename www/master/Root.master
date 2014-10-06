@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
 	<title>My Leagues</title>
-	<link rel="stylesheet" href="/css/material.css" />
+	<link rel="stylesheet" href="/css/root.css" />
 	<asp:ContentPlaceHolder ID="ContentHead" runat="server">
 	</asp:ContentPlaceHolder>
 </head>
@@ -16,6 +16,8 @@
 		<header class="primary">Header Element</header>
 
 		<section class="body">
+
+			<asp:SiteMapPath ID="siteMapPath" runat="server"></asp:SiteMapPath>
 
 			<asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
 

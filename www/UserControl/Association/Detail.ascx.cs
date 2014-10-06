@@ -14,6 +14,12 @@ public partial class UserControl_Association_Detail : BaseUserControl
 		buttonCancel.Click += buttonCancel_Click;
 		buttonDelete.Click += buttonDelete_Click;
 		buttonSave.Click += buttonSave_Click;
+		buttonLeagueList.Click += buttonLeagueList_Click;
+	}
+
+	void buttonLeagueList_Click(object sender, EventArgs e)
+	{
+		Response.Redirect(string.Format("{0}?{1}", Resources.Key.LeagueListUrl, Request.QueryString), true);
 	}
 
 	void buttonSave_Click(object sender, EventArgs e)
