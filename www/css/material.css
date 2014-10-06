@@ -12,6 +12,7 @@ body {
 }
 
 header {
+	z-index:1;
 	font-size: 3em;
 	left: 0;
 	padding: 1em 0 0.5em;
@@ -20,14 +21,17 @@ header {
 	text-align: center;
 	top: 0;
 	white-space: nowrap;
+	overflow:scroll;
 }
 
 .body {
+	z-index:0;
 	margin-top: 9em;
 	margin-bottom: 3em;
 }
 
 footer {
+	z-index:1;
 	position: fixed;
 	text-align: center;
 	right: 0;
@@ -60,6 +64,7 @@ textarea, input, bar {
 	width: calc(100% - 1em);
 }
 
+button,
 textarea,
 input {
 	-moz-border-bottom-colors: none;
@@ -76,15 +81,15 @@ input {
 	padding: 10px 10px 10px 5px;
 }
 
-	input[type=button]:hover, input[type=submit]:hover {
+	button:hover,input[type=button]:hover, input[type=submit]:hover {
 		opacity: 1;
 	}
 
-	input[type=button]:active, input[type=submit]:active {
+	button:active,input[type=button]:active, input[type=submit]:active {
 		opacity: .3;
 	}
 
-	input[type=button], input[type=submit] {
+	button, input[type=button], input[type=submit] {
 		color: #fff;
 		border-width: 2px;
 		border-style: solid;
