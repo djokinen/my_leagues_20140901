@@ -32,7 +32,7 @@ namespace MyLeagues.Dao
 			if (value != null)
 			{
 				value.Name = association.Name.Trim();
-				value.Website = association.Website.Trim();
+				value.Website =  association.Website;
 				value.Description = association.Description.Trim();
 				value.Enabled = association.Enabled;
 				value.Modified = DateTime.Now;

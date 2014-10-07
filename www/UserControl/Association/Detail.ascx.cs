@@ -19,7 +19,8 @@ public partial class UserControl_Association_Detail : BaseUserControl
 
 	void buttonLeagueList_Click(object sender, EventArgs e)
 	{
-		Response.Redirect(string.Format("{0}?{1}", Resources.Key.LeagueListUrl, Request.QueryString), true);
+		Response.Redirect(string.Format("{0}?{1}", Resources.Key.LeagueListUrl,
+			base.AssociationQueryStringPair), true);
 	}
 
 	void buttonSave_Click(object sender, EventArgs e)

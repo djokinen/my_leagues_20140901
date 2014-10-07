@@ -82,6 +82,7 @@ input {
 	font-size: medium;
 	font-family: Arial, sans-serif;
 	padding: 10px 10px 10px 5px;
+	margin: .25em 0;
 }
 
 	button:hover,input[type=button]:hover, input[type=submit]:hover {

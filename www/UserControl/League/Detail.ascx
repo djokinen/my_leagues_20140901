@@ -1,14 +1,16 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Detail.ascx.cs" Inherits="UserControl_League_Detail" %>
 
+<h2>League</h2>
+
 <section class="form">
+
+	<custom:CustomMessage ID="message" MessageType="Error" runat="server"></custom:CustomMessage>
 
 	<div class="commands">
 		<custom:CustomButton ID="buttonSeasonList" runat="server" Text="Seasons" />
 		<custom:CustomButton ID="buttonDivisionList" runat="server" Text="Divisions" />
 		<custom:CustomButton ID="buttonTeamList" runat="server" Text="Teams" />
 	</div>
-
-	<custom:CustomMessage ID="message" MessageType="Error" runat="server"></custom:CustomMessage>
 
 	<my:TextBox AutoCompleteType="Company" ID="TextName" IsRequired="true" Label="Name" runat="server" />
 
