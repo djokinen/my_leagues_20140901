@@ -1,0 +1,78 @@
+﻿using Ryerson.Web.UI.WebControls.Multilingual;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class UserControl_Form_TextArea : System.Web.UI.UserControl
+{
+	public override string ID
+	{
+		get
+		{
+			return base.ID;
+		}
+		set
+		{
+			base.ID = value;
+
+			lbl.ID = this.ID + "Label";
+			txt.ID = this.ID; // +"Text";
+			req.ID = this.ID + "Required";
+		}
+	}
+
+	protected override void OnPreRender(EventArgs e)
+	{
+		base.OnPreRender(e);
+		if (!IsPostBack)
+		{
+			lbl.Attributes["for"] = txt.ID;
+			txt.Attributes["aria-describedby"] = req.ID;
+			txt.Attributes["aria-invalid"] = false.ToString();
+			txt.Attributes["placeholder"] = this.Label;
+			if (this.IsRequired) { txt.Attributes["required"] = "required"; }
+			if (string.IsNullOrWhiteSpace(this.Title)) { this.Title = lbl.InnerText; }
+
+			req.ControlToValidate = txt.ID;
+			req.Enabled = this.IsRequired;
+		}
+	}
+
+	new public AttributeCollection Attributes { get { return txt.Attributes; } }
+
+	/// <summary>Clear content from control</summary>
+	public void Clear() { txt.Value = string.Empty; }
+
+	/// <summary>Gets and sets if this field is required or not</summary>
+	public bool IsRequired
+	{
+		get { return req.Enabled; }
+		set
+		{
+			req.Enabled = value;
+			txt.Attributes["aria-required"] = value.ToString();
+		}
+	}
+
+	/// <summary>Gets and sets the name of the label for this field</summary>
+	/// <remarks>
+	/// On Get: remove literal error element if it exists
+	/// On Set: add literal error element if this is a required field
+	/// </remarks>
+	public string Label { get { return lbl.InnerText; } set { lbl.InnerText = value; } }
+
+	/// <summary>Gets and sets the value of the input for this field</summary>
+	public string Text { get { return txt.Value.Trim(); } set { txt.Value = value; } }
+
+	/// <summary>Gets and sets the tooltip of the input for this field</summary>
+	public string Title { get { return txt.Attributes["title"]; } set { txt.Attributes["title"] = value; } }
+
+	/// <summary>Gets or sets the validation group this field belongs to</summary>
+	public string ValidationGroup { get { return req.ValidationGroup; } set { req.ValidationGroup = value; } }
+
+	/// <summary>Gets and sets the enabled status for this field</summary>
+	public bool Disabled { get { return txt.Disabled; } set { txt.Disabled = value; } }
+}

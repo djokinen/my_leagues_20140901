@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Root.master.cs" Inherits="master_Root" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<title>My Leagues</title>
+	<link rel="stylesheet" href="/css/root.css" />
+	<asp:ContentPlaceHolder ID="ContentHead" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+
+	<form id="form1" runat="server">
+
+		<header class="primary">Header Element</header>
+
+		<section class="body">
+
+			<asp:SiteMapPath ID="siteMapPath" runat="server"></asp:SiteMapPath>
+
+			<asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
+
+		</section>
+
+		<footer class="primary">
+			Footer Element with <a target="_blank" href="http://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3">link</a>.
+		</footer>
+
+	</form>
+
+</body>
+</html>
