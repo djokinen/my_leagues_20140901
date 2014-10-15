@@ -8,9 +8,9 @@ namespace MyLeagues.BL
 {
 	public static class TeamBL
 	{
-		public static List<Team> Get(bool enabledOnly)
+		public static List<Team> Get(Guid leagueId, bool enabledOnly)
 		{
-			return new TeamDao().Get(enabledOnly);
+			return new TeamDao().Get(enabledOnly).Where(n => n.LeagueId == leagueId).ToList();
 		}
 
 		public static Team GetBy(Guid teamId, bool enabledOnly)

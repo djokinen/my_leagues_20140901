@@ -67,7 +67,12 @@ public partial class UserControl_Team_Detail : BaseUserControl
 			TextDescription.Text = team.Description;
 		}
 		else { buttonDelete.Visible = false; }
+
+		linkGameList.HRef = Resources.Key.GameListUrl;
 	}
 
-	private void _redirectToListUrl() { Response.Redirect(Resources.Key.TeamListUrl, true); }
+	private void _redirectToListUrl()
+	{
+		string url = string.Format("{0}?{1}&{2}", Resources.Key.TeamListUrl, base.AssociationQueryStringPair, base.LeagueQueryStringPair);
+		Response.Redirect(url, true);}
 }

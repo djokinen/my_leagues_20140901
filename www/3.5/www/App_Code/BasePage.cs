@@ -8,19 +8,9 @@ using System.Web;
 /// </summary>
 public class BasePage : System.Web.UI.Page
 {
-	protected Guid AssociationId
-	{
-		get
-		{
-			return new Guid(Request.QueryString[Resources.Key.AssociationId]);
-		}
-	}
+	protected Guid AssociationId { get { return new Guid(Request.QueryString[Resources.Key.AssociationId]); } }
 
-	protected Guid LeagueId
-	{
-		get
-		{
-			return new Guid(Request.QueryString[Resources.Key.LeagueId]);
-		}
-	}
+	protected Guid LeagueId { get { return new Guid(Request.QueryString[Resources.Key.LeagueId]); } }
+
+	protected Guid TeamId { get { return new Guid(Request.QueryString[Resources.Key.TeamId]); } }
 }

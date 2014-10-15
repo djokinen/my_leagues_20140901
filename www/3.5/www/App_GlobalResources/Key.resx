@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AssociationId" xml:space="preserve">
     <value>aid</value>
@@ -134,6 +134,15 @@
   </data>
   <data name="DivisionUrl" xml:space="preserve">
     <value>/association/league/division/detail.aspx</value>
+  </data>
+  <data name="GameId" xml:space="preserve">
+    <value>tid</value>
+  </data>
+  <data name="GameListUrl" xml:space="preserve">
+    <value>/association/league/team/game/default.aspx</value>
+  </data>
+  <data name="GameUrl" xml:space="preserve">
+    <value>/association/league/team/game/detail.aspx</value>
   </data>
   <data name="LeagueId" xml:space="preserve">
     <value>lid</value>

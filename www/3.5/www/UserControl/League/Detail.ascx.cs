@@ -14,26 +14,6 @@ public partial class UserControl_League_Detail : BaseUserControl
 		buttonSave.Click += buttonSave_Click;
 		buttonCancel.Click += buttonCancel_Click;
 		buttonDelete.Click += buttonDelete_Click;
-
-		buttonTeamList.Click += buttonTeamList_Click;
-		buttonDivisionList.Click += buttonDivisionList_Click;
-		buttonSeasonList.Click += buttonSeasonList_Click;
-	}
-
-	void buttonSeasonList_Click(object sender, EventArgs e)
-	{
-		message.Text = "Season: " + new NotImplementedException().Message;
-	}
-
-	void buttonDivisionList_Click(object sender, EventArgs e)
-	{
-		message.Text = "Division: " + new NotImplementedException().Message;
-	}
-
-	void buttonTeamList_Click(object sender, EventArgs e)
-	{
-		message.Text = "Team: " + new NotImplementedException().Message;
-		// Response.Redirect(string.Format("{0}?{1}", Resources.Key.TeamListUrl, Request.QueryString), true);
 	}
 
 	void buttonSave_Click(object sender, EventArgs e)
@@ -89,6 +69,10 @@ public partial class UserControl_League_Detail : BaseUserControl
 			TextDescription.Text = league.Description;
 		}
 		else { buttonDelete.Visible = false; }
+
+		linkDivisionList.HRef = string.Format("{0}?{1}", Resources.Key.DivisionListUrl, Request.QueryString);
+		linkSeasonList.HRef = string.Format("{0}?{1}", Resources.Key.SeasonListUrl, Request.QueryString);
+		linkTeamList.HRef = string.Format("{0}?{1}", Resources.Key.TeamListUrl, Request.QueryString);
 	}
 
 	private void _redirectToListUrl()

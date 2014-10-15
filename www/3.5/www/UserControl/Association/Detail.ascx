@@ -7,7 +7,8 @@
 	<custom:CustomMessage ID="message" MessageType="Error" runat="server"></custom:CustomMessage>
 
 	<div class="commands">
-		<custom:CustomButton ID="buttonLeagueList" runat="server" Text="Leagues" />
+		<%--<custom:CustomButton ID="buttonLeagueList" runat="server" Text="Leagues" />--%>
+		<a id="linkLeagueList" runat="server">Leagues</a>
 	</div>	
 
 	<my:TextBox AutoCompleteType="Company" ID="TextName" IsRequired="true" Label="Name" runat="server" />

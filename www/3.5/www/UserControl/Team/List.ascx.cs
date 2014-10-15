@@ -22,7 +22,7 @@ public partial class UserControl_Team_List : BaseUserControl
 	public override void DataBind()
 	{
 		base.DataBind();
-		repeater.DataSource = TeamBL.Get(false);
+		repeater.DataSource = TeamBL.Get(base.LeagueId, false);
 		repeater.DataBind();
 	}
 }

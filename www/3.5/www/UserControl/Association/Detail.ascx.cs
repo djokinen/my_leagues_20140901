@@ -14,7 +14,7 @@ public partial class UserControl_Association_Detail : BaseUserControl
 		buttonCancel.Click += buttonCancel_Click;
 		buttonDelete.Click += buttonDelete_Click;
 		buttonSave.Click += buttonSave_Click;
-		buttonLeagueList.Click += buttonLeagueList_Click;
+		// buttonLeagueList.Click += buttonLeagueList_Click;
 	}
 
 	void buttonLeagueList_Click(object sender, EventArgs e)
@@ -67,6 +67,7 @@ public partial class UserControl_Association_Detail : BaseUserControl
 	public override void DataBind()
 	{
 		base.DataBind();
+		linkLeagueList.HRef = string.Format("{0}?{1}", Resources.Key.LeagueListUrl, base.AssociationQueryStringPair);
 		Association association = MyLeagues.BL.AssociationBL.GetBy(base.AssociationId, false);
 		if (association != null)
 		{
