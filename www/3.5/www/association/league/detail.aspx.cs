@@ -18,8 +18,8 @@ public partial class league_league_detail : BasePage
 
 	public override void DataBind()
 	{
-		leagueDetail.LeagueId = base.LeagueId;
-		leagueDetail.AssociationId = base.AssociationId;
+		// leagueDetail.LeagueId = base.LeagueId;
+		// leagueDetail.AssociationId = base.AssociationId;
 		base.DataBind();
 	}
 }

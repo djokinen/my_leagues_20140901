@@ -18,7 +18,7 @@ public partial class association_detail : BasePage
 
 	public override void DataBind()
 	{
-		associationDetail.AssociationId = base.AssociationId;
+		// associationDetail.AssociationId = base.AssociationId;
 		base.DataBind();
 	}
 }

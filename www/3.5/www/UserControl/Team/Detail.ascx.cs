@@ -27,8 +27,9 @@ public partial class UserControl_Team_Detail : BaseUserControl
 				if (team == null)
 				{
 					// insert
-					team = new Team();
+					team = new Team();					
 					team.Name = TextName.Text;
+					team.LeagueId = base.LeagueId;
 					team.Description = TextDescription.Text;
 					team = TeamBL.Insert(team);
 				}
@@ -73,6 +74,8 @@ public partial class UserControl_Team_Detail : BaseUserControl
 
 	private void _redirectToListUrl()
 	{
-		string url = string.Format("{0}?{1}&{2}", Resources.Key.TeamListUrl, base.AssociationQueryStringPair, base.LeagueQueryStringPair);
-		Response.Redirect(url, true);}
+		// base.GetLeagueListUrl();
+		// string url = string.Format("{0}?{1}&{2}", Resources.Key.TeamListUrl, base.AssociationQueryStringPair, base.LeagueQueryStringPair);
+		Response.Redirect(base.GetLeagueListUrl(), true);
+	}
 }

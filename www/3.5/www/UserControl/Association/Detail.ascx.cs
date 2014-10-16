@@ -19,8 +19,8 @@ public partial class UserControl_Association_Detail : BaseUserControl
 
 	void buttonLeagueList_Click(object sender, EventArgs e)
 	{
-		Response.Redirect(string.Format("{0}?{1}", Resources.Key.LeagueListUrl,
-			base.AssociationQueryStringPair), true);
+		// Response.Redirect(string.Format("{0}?{1}", Resources.Key.LeagueListUrl, base.AssociationQueryStringPair), true);
+		Response.Redirect(base.GetLeagueListUrl(), true);
 	}
 
 	void buttonSave_Click(object sender, EventArgs e)
@@ -67,7 +67,8 @@ public partial class UserControl_Association_Detail : BaseUserControl
 	public override void DataBind()
 	{
 		base.DataBind();
-		linkLeagueList.HRef = string.Format("{0}?{1}", Resources.Key.LeagueListUrl, base.AssociationQueryStringPair);
+		// linkLeagueList.HRef = string.Format("{0}?{1}", Resources.Key.LeagueListUrl, base.AssociationQueryStringPair);
+		linkLeagueList.HRef = base.GetLeagueListUrl(); // string.Format("{0}?{1}", Resources.Key.LeagueListUrl, base.AssociationQueryStringPair);
 		Association association = MyLeagues.BL.AssociationBL.GetBy(base.AssociationId, false);
 		if (association != null)
 		{

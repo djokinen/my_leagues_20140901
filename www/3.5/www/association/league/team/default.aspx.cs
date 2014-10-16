@@ -12,8 +12,8 @@ public partial class association_league_team_default : BasePage
 		base.OnLoad(e);
 		if (!IsPostBack)
 		{
-			teamList.AssociationId = base.LeagueId;
-			teamList.LeagueId = base.LeagueId;
+			// teamList.AssociationId = base.LeagueId;
+			// teamList.LeagueId = base.LeagueId;
 			base.DataBind();
 		}
 	}

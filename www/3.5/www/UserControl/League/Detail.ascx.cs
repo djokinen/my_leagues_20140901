@@ -70,14 +70,13 @@ public partial class UserControl_League_Detail : BaseUserControl
 		}
 		else { buttonDelete.Visible = false; }
 
-		linkDivisionList.HRef = string.Format("{0}?{1}", Resources.Key.DivisionListUrl, Request.QueryString);
-		linkSeasonList.HRef = string.Format("{0}?{1}", Resources.Key.SeasonListUrl, Request.QueryString);
-		linkTeamList.HRef = string.Format("{0}?{1}", Resources.Key.TeamListUrl, Request.QueryString);
+		linkDivisionList.HRef = base.GetDivisionListUrl();
+		linkSeasonList.HRef = base.GetSeasonListUrl();
+		linkTeamList.HRef = base.GetTeamListUrl();
 	}
 
 	private void _redirectToListUrl()
 	{
-		string url = string.Format("{0}?{1}", Resources.Key.LeagueListUrl, base.AssociationQueryStringPair);
-		Response.Redirect(url, true);
+		Response.Redirect(base.GetLeagueListUrl(), true);
 	}
 }

@@ -11,7 +11,7 @@ public partial class master_Root : BaseMasterPage
 	{
 		base.OnInit(e);
 		// siteMapPath.ItemCreated += siteMapPath_ItemCreated;
-		siteMapPath.ItemDataBound += siteMapPath_ItemDataBound;
+		// siteMapPath.ItemDataBound += siteMapPath_ItemDataBound;
 	
 	}
 
