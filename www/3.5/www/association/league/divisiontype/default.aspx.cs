@@ -5,19 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class league_league_detail : BasePage
+public partial class association_league_divisionType_default : BasePage
 {
 	protected override void OnLoad(EventArgs e)
 	{
 		base.OnLoad(e);
 		if (!IsPostBack)
 		{
-			this.DataBind();
+			// divisionTypeList.AssociationId = base.LeagueId;
+			// divisionTypeList.LeagueId = base.LeagueId;
+			base.DataBind();
 		}
-	}
-
-	public override void DataBind()
-	{
-		base.DataBind();
 	}
 }

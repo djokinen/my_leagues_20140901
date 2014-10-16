@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class league_league_detail : BasePage
+public partial class association_league_divisionType_detail : BasePage
 {
 	protected override void OnLoad(EventArgs e)
 	{
@@ -18,6 +18,9 @@ public partial class league_league_detail : BasePage
 
 	public override void DataBind()
 	{
+		// divisionTypeDetail.DivisionTypeId = base.DivisionTypeId;
+		// divisionTypeDetail.LeagueId = base.LeagueId;
+		// divisionTypeDetail.AssociationId = base.AssociationId;
 		base.DataBind();
 	}
 }

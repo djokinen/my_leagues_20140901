@@ -70,8 +70,8 @@ public partial class UserControl_League_Detail : BaseUserControl
 		}
 		else { buttonDelete.Visible = false; }
 
-		linkDivisionList.HRef = base.GetDivisionListUrl();
-		linkSeasonList.HRef = base.GetSeasonListUrl();
+		linkDivisionTypeList.HRef = base.GetDivisionTypeListUrl();
+		linkSeasonTypeList.HRef = base.GetSeasonTypeListUrl();
 		linkTeamList.HRef = base.GetTeamListUrl();
 	}
 

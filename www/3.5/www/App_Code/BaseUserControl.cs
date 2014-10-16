@@ -30,25 +30,25 @@ public class BaseUserControl : System.Web.UI.UserControl
 	
 	#endregion
 
-	#region division
+	#region division type
 
-	protected Guid DivisionId
+	protected Guid DivisionTypeId
 	{
 		get
 		{
-			string value = Request.QueryString[Resources.Key.DivisionId];
+			string value = Request.QueryString[Resources.Key.DivisionTypeId];
 			if (string.IsNullOrEmpty(value)) { return Guid.Empty; }
 			else { return new Guid(value); }
 		}
 	}
 
-	protected string GetDivisionListUrl() { return string.Format("{0}?{1}&{2}", Resources.Key.DivisionListUrl, this._associationQueryStringPair, this._leagueQueryStringPair); }
-	
-	protected string GetDivisionUrl(Guid divisionId) { return GetDivisionUrl(divisionId.ToString()); }
-	
-	protected string GetDivisionUrl(string divisionId) { return string.Format("{0}?{1}&{2}&{3}={4}", Resources.Key.DivisionUrl, this._associationQueryStringPair, this._leagueQueryStringPair, Resources.Key.DivisionId, divisionId); }
-	
-	private string _divisionQueryStringPair { get { return string.Format("{0}={1}", Resources.Key.DivisionId, this.DivisionId); } }
+	protected string GetDivisionTypeListUrl() { return string.Format("{0}?{1}&{2}", Resources.Key.DivisionTypeListUrl, this._associationQueryStringPair, this._leagueQueryStringPair); }
+
+	protected string GetDivisionTypeUrl(Guid divisionTypeId) { return GetDivisionTypeUrl(divisionTypeId.ToString()); }
+
+	protected string GetDivisionTypeUrl(string divisionTypeId) { return string.Format("{0}?{1}&{2}&{3}={4}", Resources.Key.DivisionTypeUrl, this._associationQueryStringPair, this._leagueQueryStringPair, Resources.Key.DivisionTypeId, divisionTypeId); }
+
+	private string _divisionTypeQueryStringPair { get { return string.Format("{0}={1}", Resources.Key.DivisionTypeId, this.DivisionTypeId); } }
 
 	#endregion
 
@@ -74,25 +74,25 @@ public class BaseUserControl : System.Web.UI.UserControl
 
 	#endregion
 
-	#region season
+	#region seasonType
 
-	protected Guid SeasonId
+	protected Guid SeasonTypeId
 	{
 		get
 		{
-			string value = Request.QueryString[Resources.Key.SeasonId];
+			string value = Request.QueryString[Resources.Key.SeasonTypeId];
 			if (string.IsNullOrEmpty(value)) { return Guid.Empty; }
 			else { return new Guid(value); }
 		}
 	}
 	
-	protected string GetSeasonListUrl() { return string.Format("{0}?{1}&{2}", Resources.Key.SeasonListUrl, this._associationQueryStringPair, this._leagueQueryStringPair); }
+	protected string GetSeasonTypeListUrl() { return string.Format("{0}?{1}&{2}", Resources.Key.SeasonTypeListUrl, this._associationQueryStringPair, this._leagueQueryStringPair); }
 	
-	protected string GetSeasonUrl(Guid seasonId) { return GetSeasonUrl(seasonId.ToString()); }
+	protected string GetSeasonTypeUrl(Guid seasonTypeId) { return GetSeasonTypeUrl(seasonTypeId.ToString()); }
 	
-	protected string GetSeasonUrl(string seasonId) { return string.Format("{0}?{1}&{2}&{3}={4}", Resources.Key.SeasonUrl, this._associationQueryStringPair, this._leagueQueryStringPair, Resources.Key.SeasonId, seasonId); }
+	protected string GetSeasonTypeUrl(string seasonTypeId) { return string.Format("{0}?{1}&{2}&{3}={4}", Resources.Key.SeasonTypeUrl, this._associationQueryStringPair, this._leagueQueryStringPair, Resources.Key.SeasonTypeId, seasonTypeId); }
 	
-	private string _seasonQueryStringPair { get { return string.Format("{0}={1}", Resources.Key.SeasonId, this.SeasonId); } }
+	private string _seasonTypeQueryStringPair { get { return string.Format("{0}={1}", Resources.Key.SeasonTypeId, this.SeasonTypeId); } }
 
 	#endregion
 

@@ -5,10 +5,16 @@
 		<siteMapNode url="/association/default.aspx" title="Associations">
 			<siteMapNode url="/association/detail.aspx" title="Association">
 				<siteMapNode url="/association/league/default.aspx" title="Leagues">
-					<siteMapNode url="/association/league/detail.aspx" title="League"></siteMapNode>
+					<siteMapNode url="/association/league/detail.aspx" title="League">
+						<siteMapNode url="/association/league/divisiontype/default.aspx" title="Divisions">
+							<siteMapNode url="/association/league/divisiontype/detail.aspx" title="Division"></siteMapNode>
+						</siteMapNode>
+						<siteMapNode url="/association/league/team/default.aspx" title="Teams">
+							<siteMapNode url="/association/league/team/detail.aspx" title="Team"></siteMapNode>
+						</siteMapNode>						
+					</siteMapNode>
 				</siteMapNode>
 			</siteMapNode>
-		</siteMapNode>
-		
+		</siteMapNode>		
 	</siteMapNode>
 </siteMap>

@@ -17,7 +17,7 @@
 
 		<section class="body">
 
-			<%--<asp:SiteMapPath ID="siteMapPath" runat="server"></asp:SiteMapPath>--%>
+			<asp:SiteMapPath ID="siteMapPath" runat="server"></asp:SiteMapPath>
 
 			<asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
 
