@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-	<siteMapNode url="/" title="My Leagues">
-		<siteMapNode url="/association/default.aspx" title="Associations">
-			<siteMapNode url="/association/detail.aspx" title="Association">
-				<siteMapNode url="/association/league/default.aspx" title="Leagues">
-					<siteMapNode url="/association/league/detail.aspx" title="League">
+	<siteMapNode url="default.aspx" title="My Leagues">
+		<siteMapNode url="association/default.aspx" title="Associations">
+			<siteMapNode url="association/detail.aspx" title="Association">
+				<siteMapNode url="association/league/default.aspx" title="Leagues">
+					<siteMapNode url="association/league/detail.aspx" title="League">
 						
-						<siteMapNode url="/association/league/divisiontype/default.aspx" title="Division Types">
-							<siteMapNode url="/association/league/divisiontype/detail.aspx" title="Division"></siteMapNode>
+						<siteMapNode url="association/league/divisiontype/default.aspx" title="Division Types">
+							<siteMapNode url="association/league/divisiontype/detail.aspx" title="Division"></siteMapNode>
 						</siteMapNode>
 
-						<siteMapNode url="/association/league/seasontype/default.aspx" title="Season Types">
-							<siteMapNode url="/association/league/seasontype/detail.aspx" title="Season"></siteMapNode>
+						<siteMapNode url="association/league/seasontype/default.aspx" title="Season Types">
+							<siteMapNode url="association/league/seasontype/detail.aspx" title="Season"></siteMapNode>
 						</siteMapNode>
 						
-						<siteMapNode url="/association/league/team/default.aspx" title="Teams">
-							<siteMapNode url="/association/league/team/detail.aspx" title="Team"></siteMapNode>
+						<siteMapNode url="association/league/team/default.aspx" title="Teams">
+							<siteMapNode url="association/league/team/detail.aspx" title="Team"></siteMapNode>
 						</siteMapNode>
 						
 					</siteMapNode>
