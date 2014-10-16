@@ -1,6 +1,6 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="List.ascx.cs" Inherits="UserControl_League_List" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="List.ascx.cs" Inherits="UserControl_SeasonType_List" %>
 
-<h2>League List</h2>
+<h2>SeasonType List</h2>
 
 <custom:CustomButton ButtonAction="Create" ID="buttonCreate" runat="server" />
 
@@ -14,7 +14,7 @@
 
 		<li>
 			<div class="detail">
-				<a href="<%# base.GetLeagueUrl(Eval("ID").ToString()) %>">
+				<a href="<%# base.GetSeasonTypeUrl(Eval("ID").ToString()) %>">
 					<div class="name"><%# Eval("Name") %></div>
 					<div class="description"><%# Eval("Description") %></div>
 				</a>

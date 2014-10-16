@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="List.ascx.cs" Inherits="UserControl_Team_List" %>
 
-<h2>Teams</h2>
+<h2>Team List</h2>
 
 <custom:CustomButton ButtonAction="Create" ID="buttonCreate" runat="server" />
 

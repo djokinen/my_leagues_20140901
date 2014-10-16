@@ -13,17 +13,19 @@
 
 	<form id="form1" runat="server">
 
-		<header style="display:none;" class="primary">Header Element</header>
+		<header style="display: none;" class="primary">Header Element</header>
 
 		<section class="body">
 
-			<asp:SiteMapPath ID="siteMapPath" runat="server"></asp:SiteMapPath>
+			<section id="breadcrumbs">
+				<asp:SiteMapPath ID="siteMapPath" runat="server"></asp:SiteMapPath>
+			</section>
 
 			<asp:ContentPlaceHolder ID="ContentBody" runat="server"></asp:ContentPlaceHolder>
 
 		</section>
 
-		<footer style="display:none;" class="primary">
+		<footer style="display: none;" class="primary">
 			Footer Element with <a target="_blank" href="http://scotch.io/tutorials/css/google-material-design-input-boxes-in-css3">link</a>.
 		</footer>
 

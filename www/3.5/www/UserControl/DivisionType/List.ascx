@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="List.ascx.cs" Inherits="UserControl_DivisionType_List" %>
 
-<h2>DivisionTypes</h2>
+<h2>DivisionType List</h2>
 
 <custom:CustomButton ButtonAction="Create" ID="buttonCreate" runat="server" />
 
