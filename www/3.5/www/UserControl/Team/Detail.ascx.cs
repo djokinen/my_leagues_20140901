@@ -11,7 +11,7 @@ public partial class UserControl_Team_Detail : BaseUserControl
 	protected override void OnInit(EventArgs e)
 	{
 		base.OnInit(e);
-		buttonCancel.Click += buttonCancel_Click;
+		// buttonCancel.Click += buttonCancel_Click;
 		buttonDelete.Click += buttonDelete_Click;
 		buttonSave.Click += buttonSave_Click;
 	}
@@ -27,7 +27,7 @@ public partial class UserControl_Team_Detail : BaseUserControl
 				if (team == null)
 				{
 					// insert
-					team = new Team();					
+					team = new Team();
 					team.Name = TextName.Text;
 					team.LeagueId = base.LeagueId;
 					team.Description = TextDescription.Text;
@@ -56,8 +56,6 @@ public partial class UserControl_Team_Detail : BaseUserControl
 		_redirectToListUrl();
 	}
 
-	void buttonCancel_Click(object sender, EventArgs e) { _redirectToListUrl(); }
-
 	public override void DataBind()
 	{
 		base.DataBind();
@@ -69,13 +67,12 @@ public partial class UserControl_Team_Detail : BaseUserControl
 		}
 		else { buttonDelete.Visible = false; }
 
-		linkGameList.HRef = Resources.Key.GameListUrl;
+		linkGameList.HRef = new NotImplementedException().Message;
+		linkCancel.HRef = base.GetTeamListUrl();
 	}
 
 	private void _redirectToListUrl()
 	{
-		// base.GetLeagueListUrl();
-		// string url = string.Format("{0}?{1}&{2}", Resources.Key.TeamListUrl, base.AssociationQueryStringPair, base.LeagueQueryStringPair);
-		Response.Redirect(base.GetLeagueListUrl(), true);
+		Response.Redirect(base.GetTeamListUrl(), true);
 	}
 }

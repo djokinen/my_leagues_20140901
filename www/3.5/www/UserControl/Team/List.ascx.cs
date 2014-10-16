@@ -16,7 +16,8 @@ public partial class UserControl_Team_List : BaseUserControl
 
 	void buttonCreate_Click(object sender, EventArgs e)
 	{
-		Response.Redirect(Resources.Key.TeamUrl, true);
+		// Response.Redirect(Resources.Key.TeamUrl, true);
+		Response.Redirect(base.GetTeamUrl(Guid.Empty), true);
 	}
 
 	public override void DataBind()

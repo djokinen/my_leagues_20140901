@@ -16,8 +16,7 @@ public partial class UserControl_League_List : BaseUserControl
 
 	void buttonCreate_Click(object sender, EventArgs e)
 	{
-		string url = string.Format("{0}?{1}", Resources.Key.LeagueUrl, Request.QueryString);
-		Response.Redirect(url, true);
+		Response.Redirect(base.GetLeagueUrl(Guid.Empty), true);
 	}
 
 	public override void DataBind()

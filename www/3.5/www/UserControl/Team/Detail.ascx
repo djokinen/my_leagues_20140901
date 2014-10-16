@@ -17,8 +17,9 @@
 
 	<div class="commands">
 		<custom:CustomButton ButtonAction="Save" ID="buttonSave" runat="server" />
-		<custom:CustomButton ButtonAction="Cancel" ID="buttonCancel" runat="server" />
+		<%--<custom:CustomButton ButtonAction="Cancel" ID="buttonCancel" runat="server" />--%>		
 		<custom:CustomButton ButtonAction="Delete" ID="buttonDelete" runat="server" />
+		<a id="linkCancel" runat="server">Cancel</a>
 	</div>
 
 </section>

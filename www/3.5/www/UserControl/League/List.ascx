@@ -14,7 +14,7 @@
 
 		<li>
 			<div class="detail">
-				<a href="detail.aspx?<%= Resources.Key.LeagueId %>=<%# Eval("ID") %>&<%= Resources.Key.AssociationId %>=<%# Eval("AssociationId") %>">
+				<a href="<%# base.GetLeagueUrl(Eval("ID").ToString()) %>">
 					<div class="name"><%# Eval("Name") %></div>
 					<div class="description"><%# Eval("Description") %></div>
 				</a>
