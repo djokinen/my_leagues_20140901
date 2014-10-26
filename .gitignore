@@ -36,3 +36,7 @@ Icon
 .Trashes
 
 www/Web.config
+*.mdf
+www/Web.config
+*.ldf
+www/Web.config
